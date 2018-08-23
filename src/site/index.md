@@ -1,34 +1,35 @@
 ---
-title: EleventyOne
-subtitle: A project scaffold for getting building with Eleventy quickly.
+title: Content Subscriptions
+subtitle: A singel source of content which can publish to otehr sites
 layout: layouts/base.njk
 ---
 
 
-## This site is a starting point
 
-From this point we should already have:
+## Content feeds
 
-- [Eleventy](https://11ty.io) with a skeleton site
-- A date format filter for Nunjucks
-- Sass pipeline
-- JS pipeline
-- JS [search index](/search.json) generator
-- Serverless (FaaS) development pipeline with Netlify Functions for Lambda
-
-
-## Post pages
-
-The pages found in in the posts
+This site published the following content feeds which other sites can consume:
 
 <ul class="listing">
-{%- for page in collections.post -%}
-  <li>
-    <a href="{{ page.url }}">{{ page.data.title }}</a> -
-    <time datetime="{{ page.date }}">{{ page.date | dateDisplay }}</time>
-  </li>
+{%- for page in collections.feed -%}
+  <li><a href="{{ page.url }}">{{ page.url }}</a></li>
 {%- endfor -%}
 </ul>
+
+
+## Subscribe to the feeds
+
+Currently, you can't subscribe to be notified of changes per feed, you'll be notified when any feed changes. Subscribe by posting the _build hook url_ of your site to this form.
+
+<form name="subscribe" netlify>
+  <label>Netlify Deploy Hook URL</label>
+  <input id="deploy_hook" name="deploy_hook" type="text" />
+  <input type="submit" value="subscribe">
+</form>
+
+## Unsubscribe from the feeds
+
+Subscribe by posting the _build hook url_ of your site to this form
 
 
 
