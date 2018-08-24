@@ -15,13 +15,12 @@ export function handler(event, context, callback) {
 
   axios.get(url)
     .then(function (response) {
-        var body = response;
-        console.log('response :', response);
-        // hooks.forEach(url => {
-        //   request.post(url);
-        //   console.log('Notifying :', url);
-        // });
-        // console.log(`Deploy hooks for ${hooks.length} subscribers were called`);
+        var items = response.data;
+
+        array.forEach(entry => {
+          console.log('data :', entry.data);
+          //   request.post(url);
+        });
         return;
 
     })
