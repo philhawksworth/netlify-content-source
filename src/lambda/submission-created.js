@@ -1,7 +1,7 @@
-var axios    = require('axios');
+var axios = require('axios');
 
 // load environment variables
-require('dotenv').config()
+// require('dotenv').config()
 
 
 export function handler(event, context, callback) {
