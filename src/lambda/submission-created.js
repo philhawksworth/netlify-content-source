@@ -16,8 +16,7 @@ export function handler(event, context, callback) {
   axios.get(url)
     .then(function (response) {
         var items = response.data;
-
-        array.forEach(entry => {
+        items.forEach(entry => {
           console.log('data :', entry.data);
           //   request.post(url);
         });
