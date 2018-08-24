@@ -17,8 +17,8 @@ export function handler(event, context, callback) {
     .then(function (response) {
         var items = response.data;
         items.forEach(entry => {
-          console.log('data :', entry.data);
-          //   request.post(url);
+          console.log('Notifying :', entry.data.deploy_hook);
+          request.post(entry.data.deploy_hook);
         });
         return;
 
