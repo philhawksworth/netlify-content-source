@@ -1,9 +1,5 @@
 var axios = require('axios');
 
-// load environment variables
-// require('dotenv').config()
-
-
 export function handler(event, context, callback) {
 
   // we'll fetch hooks from the subscriptions form entries
