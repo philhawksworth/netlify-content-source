@@ -6,7 +6,7 @@ var axios = require('axios');
 
 export function handler(event, context, callback) {
 
-  console.log('event.payload :', event.payload);
+  console.log('event.payload :', context.payload);
 
   // we'll fetch hooks from the subscriptions form entries
   var oauth_token = process.env.NETLIFY_TOKEN;

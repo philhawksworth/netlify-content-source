@@ -2,11 +2,9 @@
 permalink: /feeds/news.json
 tags: feed
 ---
-[
-{%- for entry in collections.news -%}
+[{%- for entry in collections.news -%}
   {
-    'title': '{{ entry.data.title }}',
-    'text': '{{- entry.templateContent | safe  -}}'
+    "title": "{{- entry.data.title | safe -}}",
+    "text": "{{- entry.templateContent | safe | trim  -}}"
   }{%- if not loop.last -%},{%- endif -%}
-{%- endfor -%}
-]
+{%- endfor -%}]
