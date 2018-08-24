@@ -1,4 +1,3 @@
-const request = require('request');
 var axios    = require('axios');
 
 // load environment variables
