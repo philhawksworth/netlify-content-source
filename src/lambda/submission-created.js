@@ -18,7 +18,7 @@ export function handler(event, context, callback) {
         var items = response.data;
         items.forEach(entry => {
           console.log('Notifying :', entry.data.deploy_hook);
-          request.post(entry.data.deploy_hook);
+          axios.post(entry.data.deploy_hook);
         });
         return;
 
