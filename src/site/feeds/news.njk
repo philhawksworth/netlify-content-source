@@ -5,8 +5,8 @@ tags: feed
 [
 {%- for entry in collections.news -%}
   {
-    "title": "{{ entry.data.title }}",
-    "text": "{{- entry.templateContent | safe  -}}"
-  }{% if not loop.last %},{% endif %}
+    'title': '{{ entry.data.title }}',
+    'text': '{{- entry.templateContent | safe  -}}'
+  }{%- if not loop.last -%},{%- endif -%}
 {%- endfor -%}
 ]
